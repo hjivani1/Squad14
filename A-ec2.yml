@@ -1,13 +1,13 @@
 - name: "Ansible VMs Creations"
-  host: localhost
+  hosts: localhost
   tasks:
     - 
       ec2:
         instance_tags:
           Name: Build
         assign_public_ip: true
-        aws_access_key: AKIAXCUAWLXEEJNM5SE6
-        aws_secret_key: 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
+        aws_access_key: 
+        aws_secret_key: 
         count: 1
         group: devopsbc1
         image: ami-01e7ca2ef94a0ae86
@@ -22,8 +22,8 @@
         instance_tags:
           Name: Test
         assign_public_ip: true
-        aws_access_key: AKIAXCUAWLXEEJNM5SE6
-        aws_secret_key: 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
+        aws_access_key: 
+        aws_secret_key: 
         count: 1
         group: devopsbc1
         image: ami-01e7ca2ef94a0ae86
@@ -38,8 +38,8 @@
         instance_tags:
           Name: Prod
         assign_public_ip: true
-        aws_access_key: AKIAXCUAWLXEEJNM5SE6
-        aws_secret_key: 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
+        aws_access_key: 
+        aws_secret_key: 
         count: 1
         group: devopsbc1
         image: ami-01e7ca2ef94a0ae86
