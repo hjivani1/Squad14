@@ -49,6 +49,3 @@
         vpc_subnet_id: subnet-80db99cc
         wait: true
       name: "launching AWS instance for Prod Server"
-    - name: "Pause for 15 min."
-      pause:
-        seconds: 900
