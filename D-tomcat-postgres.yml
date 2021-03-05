@@ -1,0 +1,18 @@
+---
+- hosts: tomcatANDpostgres
+  become: yes
+  tasks:
+  - name: "Download the Tomcat script"
+    get_url:
+      url: https://raw.githubusercontent.com/devopsbc01/Scripts/master/tomcat.sh
+      dest: /tomcat.sh
+      mode: '7777'
+  - name: "Execute the Tomcat script"
+    shell: yes | /tomcat.sh
+  - name: "Download the Postgres script"
+    get_url:
+      url: https://raw.githubusercontent.com/devopsbc01/Scripts/master/Postgresql-Install-1.sh
+      dest: /Postgresql-Install-1.sh
+      mode: '7777'
+  - name: "Execute the Postgres script"
+    shell: yes | /Postgresql-Install-1.sh
